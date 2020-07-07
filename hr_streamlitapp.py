@@ -87,7 +87,7 @@ def main():
        average_monthly_hours, time_spend_company, work_accident,
        promotion_last_5years, salary, IT, accounting, hr,
        management, marketing, product_mng, sales, support,
-       technical]]).astype(np.float64)
+       technical]])
     if st.button('classify'):
         if options=='K Nearest Neighbors':
             result=knn.predict(inputs)
