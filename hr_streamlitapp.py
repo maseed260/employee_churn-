@@ -23,7 +23,7 @@ def main():
     </div>
     """
     st.markdown(html_temp,unsafe_allow_html=True)
-    activities=["K Nearest Neighbors","Logistic Regression","Decision Tree"]
+    activities=["K Nearest Neighbors","Decision Tree"]
     options=st.sidebar.selectbox('Which model would you like to use',activities)
     st.subheader(options)
     satisfaction_level=st.text_input("Satisfaction level","Type here")
@@ -91,13 +91,6 @@ def main():
     if st.button('classify'):
         if options=='K Nearest Neighbors':
             result=knn.predict(inputs)
-            st.success('The output is {}'.format(result))
-            if result==0:
-                st.markdown(stay_html,unsafe_allow_html=True)
-            else:
-                st.markdown(left_html,unsafe_allow_html=True)
-        elif options=='Logistic Regression':
-            result=log_reg.predict(inputs)
             st.success('The output is {}'.format(result))
             if result==0:
                 st.markdown(stay_html,unsafe_allow_html=True)
