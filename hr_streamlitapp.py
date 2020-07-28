@@ -27,13 +27,13 @@ def main():
     activities=["K Nearest Neighbors","Support Vector Machines","Decision Tree"]
     options=st.sidebar.selectbox('Which model would you like to use',activities)
     st.subheader(options)
-    satisfaction_level=st.text_input("Satisfaction level","Type here")
-    last_evaluation=st.text_input("last evaluation","Type here")
-    number_project=st.text_input("number project","Type here")
-    average_monthly_hours=st.text_input("average monthly hours","Type here")
-    time_spend_company=st.text_input("time spent at company","Type here")
-    work_accident=st.text_input("work accident","Type here")
-    promotion_last_5years=st.text_input("Promotion in last 5 years","Type here")
+    satisfaction_level=st.text_input("Satisfaction level")
+    last_evaluation=st.text_input("last evaluation")
+    number_project=st.text_input("number project")
+    average_monthly_hours=st.text_input("average monthly hours")
+    time_spend_company=st.text_input("time spent at company")
+    work_accident=st.text_input("work accident")
+    promotion_last_5years=st.text_input("Promotion in last "+ str(time_spend_company) +" years")
     salary_type=["low","medium","high"]
     sal_type=st.selectbox("Select employee's salary type",salary_type)
     if sal_type=="low":
